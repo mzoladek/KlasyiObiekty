@@ -1,69 +1,19 @@
-import java.util.Scanner;
-
-public class Main
-{
-    public static void main(String[] args)
+public class zad1 {
+    public static boolean IsPalindrome(String napis)
     {
-        System.out.println("Podaj n:");
+        String NaOdwrot = "";
 
-
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-
-        System.out.println("Zadanie 1a. \n");
-
-        for(int i=0;i<n;i++)
+        for(int i = napis.length()-1;i>=0;i--)
         {
-            for(int j=0;j<=i;j++)
-            {System.out.print("*");}
-            System.out.println();
+            NaOdwrot = NaOdwrot + napis.charAt(i);
         }
-
-        System.out.println();
-        System.out.println("Zadanie 1b. \n");
-
-        for(int i=n;i>0;i--)
+        if (napis.equals(NaOdwrot))
         {
-            for(int j=0;j<i;j++)
-            {System.out.print("*");}
-            System.out.println();
+            return true;
         }
-
-        System.out.println();
-        System.out.println("Zadanie 1c. \n");
-
-        for(int i=n;i>0;i--)
+        else
         {
-            for(int j=0;j<n;j++)
-            {
-                if(j >= i - 1)
-                {
-                    System.out.print("*");
-                }
-                else
-                {
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
+            return false;
         }
-
-        System.out.println();
-        System.out.println("Zadanie 1b. \n");
-
-        for(int i=0;i<n;i++)
-        {
-            for(int j=0;j<n;j++)
-            {
-                if(j>=i)
-                    System.out.print("*");
-                else
-                    System.out.print(" ");
-            }
-            System.out.println();
-        }
-        }
-
-
-
+    }
 }
